@@ -106,5 +106,4 @@ alias ga="git add ."
 alias gc="git commit -m 'kekw'"
 alias gp="git push"
 alias gg="ga && gc && gp"
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 export PATH=$PATH:/home/toki/.spicetify
