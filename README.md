@@ -10,6 +10,10 @@
 - xclip
 - nitrogen
 
+*use this for vim theme*
+`git clone https://github.com/NLKNguyen/papercolor-theme.git ~/.vim/pack/colors/start/papercolor-theme`
+
+
 ## config files
 .vimrc
 .zshrc
