@@ -88,6 +88,7 @@ Plug 'preservim/vim-markdown'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
 Plug 'mzlogin/vim-markdown-toc'
+Plug 'mboughaba/i3config.vim'
 call plug#end()
 
 " }}}
@@ -147,6 +148,16 @@ augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
+
+aug i3config_ft_detection
+  au!
+  au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+aug end
+
+aug i3status_ft_detection                        
+    au!
+    au BufNewFile,BufRead ~/.config/i3status/config set        filetype=i3config
+aug end
 
 autocmd Filetype html setlocal tabstop=2 shiftwidth=2 expandtab
 
