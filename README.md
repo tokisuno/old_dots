@@ -17,6 +17,8 @@
 ## programs to remember to download
 `sudo apt install vim git picom ibus-hangul scrot xclip nitrogen texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra`
 
+- https://www.rpi.edu/dept/arc/training/latex/resumes/
+
 ## config files
 .vimrc
 .zshrc
