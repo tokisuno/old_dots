@@ -12,10 +12,10 @@
 
 *use this for vim theme*
 
-`git clone https://github.com/NLKNguyen/papercolor-theme.git ~/.vim/pack/colors/start/papercolor-theme`
+``git clone https://github.com/NLKNguyen/papercolor-theme.git ~/.vim/pack/colors/start/papercolor-theme``
 
 ## programs to remember to download
-sudo apt install vim git picom ibus-hangul scrot xclip nitrogen texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra 
+`sudo apt install vim git picom ibus-hangul scrot xclip nitrogen texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra`
 
 ## config files
 .vimrc
