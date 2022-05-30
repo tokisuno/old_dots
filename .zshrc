@@ -116,9 +116,3 @@ alias dstat="vim ~/.config/i3status/config"
 alias dzsh="vim ~/.zshrc"
 
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-
-export PATH=$PATH:/home/toki/.spicetify
-export SPOTIPY_CLIENT_ID='1ba818b3208a47c99142a4d883ab3ac3'
-export SPOTIPY_CLIENT_SECRET='349d1f58ce4546be8d45c49c8a9059e8'
-
-
