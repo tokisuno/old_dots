@@ -1,23 +1,15 @@
 # dotfiles
 
 ## dependencies
-- vim
-- git
-- picom
-- i3 (gaps)
-- ibus-hangul 
-- scrot
-- xclip
-- nitrogen
 
-*use this for vim theme*
+`sudo apt install vim git picom ibus-hangul scrot xclip nitrogen texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra zsh`
 
-``git clone https://github.com/NLKNguyen/papercolor-theme.git ~/.vim/pack/colors/start/papercolor-theme``
+*other things to download*
 
-## programs to remember to download
-`sudo apt install vim git picom ibus-hangul scrot xclip nitrogen texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra`
+- `git clone https://github.com/NLKNguyen/papercolor-theme.git ~/.vim/pack/colors/start/papercolor-theme`
+- `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+-   
 
-- https://www.rpi.edu/dept/arc/training/latex/resumes/
 
 ## config files
 .vimrc
