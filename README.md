@@ -1,4 +1,4 @@
-# dotfiles
+# dotfiles - my entire config
 
 ## dependencies
 (i use mint btw)
@@ -13,6 +13,7 @@
 
 - `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
 
+- `https://apps.ankiweb.net/`
 
 ## config files
 .vimrc
