@@ -3,7 +3,7 @@
 ## dependencies
 (i use mint btw)
 
-`sudo apt install i3 vim git picom ibus-hangul scrot xclip nitrogen texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra zsh i3-gaps`
+`sudo apt install i3 vim git picom ibus-hangul scrot xclip nitrogen texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra zsh`
 
 *other things to download*
 
@@ -14,6 +14,9 @@
 - `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
 
 - `https://apps.ankiweb.net/`
+
+- https://blog.elreydetoda.site/minimal-i3-gaps-install-ubuntu/
+  - `sudo add-apt-repository -y ppa:regolith-linux/stable && sudo apt install i3-gaps`
 
 ## config files
 .vimrc
