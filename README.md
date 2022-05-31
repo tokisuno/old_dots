@@ -1,14 +1,14 @@
 # dotfiles
 
 ## dependencies
+(i use mint btw)
 
-`sudo apt install vim git picom ibus-hangul scrot xclip nitrogen texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra zsh`
+`sudo apt install i3 vim git picom ibus-hangul scrot xclip nitrogen texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra zsh i3-gaps`
 
 *other things to download*
 
 - `git clone https://github.com/NLKNguyen/papercolor-theme.git ~/.vim/pack/colors/start/papercolor-theme`
 - `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-- https://gist.github.com/boreycutts/6417980039760d9d9dac0dd2148d4783
 
 
 ## config files
