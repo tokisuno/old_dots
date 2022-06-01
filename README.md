@@ -22,7 +22,7 @@
   - `sudo add-apt-repository -y ppa:regolith-linux/stable && sudo apt install i3-gaps`
 
 ## config files
-.vimrc
-.zshrc
-i3 config (.config/i3/config)
-i3status config (.config/i3status/config)
+- .vimrc
+- .zshrc
+- i3 config (.config/i3/config)
+- i3status config (.config/i3status/config)
