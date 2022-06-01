@@ -82,13 +82,25 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 call plug#begin('~/.vim/plugged')
 
+" Normal Plugins
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
 Plug 'preservim/vim-markdown'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
 Plug 'mzlogin/vim-markdown-toc'
+
+" Development/Syntax Plugins
+
+Plug 'vim-syntastic/syntastic'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-surround'
 Plug 'mboughaba/i3config.vim'
+Plug 'vim-latex/vim-latex'
+Plug 'mboughaba/i3config.vim'
+
 call plug#end()
 
 " }}}
