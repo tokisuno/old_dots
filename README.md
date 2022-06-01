@@ -6,7 +6,7 @@
 ### to do
 - upload picom.conf
 
-`sudo apt install i3 vim git picom ibus-hangul scrot xclip nitrogen fonts-nanum fonts-nanum-coding fonts-nanum-eco fonts-nanum-extra texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-korean zsh libpam0g-dev libxcb-xkb-dev`
+`sudo apt install i3 vim git picom ibus-hangul scrot xclip nitrogen rofi fonts-nanum fonts-nanum-coding fonts-nanum-eco fonts-nanum-extra texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-korean zsh libpam0g-dev libxcb-xkb-dev`
 
 *other things to download*
 
