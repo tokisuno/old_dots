@@ -15,8 +15,9 @@
 
 - `https://apps.ankiweb.net/`
 
-- https://blog.elreydetoda.site/minimal-i3-gaps-install-ubuntu/
-  - `sudo add-apt-repository -y ppa:regolith-linux/stable && sudo apt install i3-gaps`
+- `sudo add-apt-repository -y ppa:regolith-linux/stable && sudo apt install i3-gaps`
+
+- `
 
 ## config files
 - .vimrc
