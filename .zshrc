@@ -11,12 +11,6 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="strug" # set by `omz`
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -107,12 +101,15 @@ alias gc="git commit -m 'kekw'"
 alias gp="git push"
 alias gg="ga && gc && gp"
 
+# nordvpn aliases
 alias vpnc="nordvpn connect"
 alias vpnd="nordvpn disconnect"
 
+# lazy config vim aliases
 alias dvim="vim ~/.vimrc"
 alias di3="vim ~/.config/i3/config"
 alias dstat="vim ~/.config/i3status/config"
 alias dzsh="vim ~/.zshrc"
 
+# no idea how this works LMAO
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"

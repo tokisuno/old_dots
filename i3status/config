@@ -10,15 +10,15 @@ general {
 
 order += "disk /"
 order += "path_exists VPN"
-order += "wireless wlx7cc2c62d61ba"
-# order += "ethernet enp1s0"
-order += "battery 0"
+#order += "wireless wlx7cc2c62d61ba"
+order += "ethernet enp1s0"
+# order += "battery 0"
 order += "memory"
 order += "load"
 order += "tztime local"
 order += "tztime toronto"
 
-
+# usb wifi card ID kekw
 wireless wlx7cc2c62d61ba {
         format_up = "W: (%quality at %essid, %bitrate) %ip"
         format_down = "W: down"
