@@ -95,15 +95,15 @@ Plug 'vim-airline/vim-airline'
 Plug 'mzlogin/vim-markdown-toc'
 
 " Development/Syntax Plugins
-
 Plug 'vim-syntastic/syntastic'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'mboughaba/i3config.vim'
-Plug 'vim-latex/vim-latex'
 Plug 'mboughaba/i3config.vim'
+Plug 'vim-latex/vim-latex'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
@@ -119,6 +119,8 @@ inoremap jj <esc>
 " centers word vertically when moving to the next word in a word search
 nnoremap n nzz
 nnoremap N Nzz
+
+nnoremap <F8> :Goyo<cr>
 
 " yank from cursor end of line
 nnoremap Y y$
