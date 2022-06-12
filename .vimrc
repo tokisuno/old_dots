@@ -51,8 +51,12 @@ set breakindent
 " fixing text wrapping (i like it)
 set wrap linebreak nolist
 
+" smart shit
 " allows for searching for specifically capital letters
 set smartcase
+set smarttab
+set smartindent
+set autoindent 
 
 " shows partial command you type in the last line of the screen
 set showcmd
