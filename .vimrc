@@ -16,7 +16,14 @@ syntax on
 " theme
 set t_Co=256
 set background=dark
-colorscheme PaperColor
+colorscheme vim-monokai-tasty
+"...
+    " vim hardcodes background color erase even if the terminfo file does
+    " not contain bce (not to mention that libvte based terminals
+    " incorrectly contain bce in their terminfo files). This causes
+    " incorrect background rendering when using a color theme with a
+    " background color.
+    let &t_ut=''
 
 " add line number (idk yet)
 set number
@@ -84,28 +91,30 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 " Plugins ----- {{{
 
-call plug#begin('~/.vim/plugged')
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Normal Plugins
-Plug 'dense-analysis/ale'
-Plug 'preservim/nerdtree'
-Plug 'preservim/vim-markdown'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'vim-airline/vim-airline'
-Plug 'mzlogin/vim-markdown-toc'
+Plugin 'VundleVim/Vundle.vim'"
+Plugin 'dense-analysis/ale'
+Plugin 'preservim/nerdtree'
+Plugin 'preservim/vim-markdown'
+Plugin 'patstockwell/vim-monokai-tasty'
+Plugin 'vim-airline/vim-airline'
+Plugin 'mzlogin/vim-markdown-toc'
+
 
 " Development/Syntax Plugins
-Plug 'vim-syntastic/syntastic'
-Plug 'othree/html5.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-surround'
-Plug 'mboughaba/i3config.vim'
-Plug 'mboughaba/i3config.vim'
-Plug 'vim-latex/vim-latex'
-Plug 'junegunn/goyo.vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-surround'
+Plugin 'mboughaba/i3config.vim'
+Plugin 'vim-latex/vim-latex'
+Plugin 'junegunn/goyo.vim'
 
-call plug#end()
+call vundle#end()
 
 " }}}
 
@@ -120,7 +129,8 @@ inoremap jj <esc>
 nnoremap n nzz
 nnoremap N Nzz
 
-nnoremap <F8> :Goyo<cr>
+nnoremap <F8> :Goyo<CR>
+nnoremap <leader>m :set relativenumber!<CR>
 
 " yank from cursor end of line
 nnoremap Y y$

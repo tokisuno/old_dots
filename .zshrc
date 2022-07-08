@@ -83,6 +83,18 @@ if [[ -n $SSH_CONNECTION ]]; then
         export EDITOR='gedit'
 fi
 
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"          
+fi
+
+if [ -d "$HOME/.deno/bin" ] ; then
+    PATH="$HOME/.deno/bin:$PATH"          
+fi
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -110,6 +122,11 @@ alias dvim="vim ~/.vimrc"
 alias di3="vim ~/.config/i3/config"
 alias dstat="vim ~/.config/i3status/config"
 alias dzsh="vim ~/.zshrc"
+alias dkit="vim ~/.config/kitty/kitty.conf"
+alias sz="swallow zathura " 
 
+export SPOTIPY_CLIENT_ID='1ba818b3208a47c99142a4d883ab3ac3'
+export SPOTIPY_CLIENT_SECRET='349d1f58ce4546be8d45c49c8a9059e8'
+export SPOTIPY_REDIRECT_URI='https://localhost:8888'
 # no idea how this works LMAO
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
