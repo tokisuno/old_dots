@@ -129,7 +129,7 @@ inoremap jj <esc>
 nnoremap n nzz
 nnoremap N Nzz
 
-nnoremap <F8> :Goyo<CR>
+nnoremap <C-g> :Goyo<CR>
 nnoremap <leader>m :set relativenumber!<CR>
 
 " yank from cursor end of line
@@ -176,6 +176,12 @@ augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
+
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd FileType markdown set cursorline
+autocmd FileType markdown set conceallevel=2
+autocmd FileType markdown setlocal spelllang=en_gb
+
 
 aug i3config_ft_detection
   au!
