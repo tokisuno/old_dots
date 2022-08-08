@@ -1,5 +1,4 @@
-" disable compatibility with vi which can cause unexpected issue 
-set nocompatible
+" disable compatibility with vi which can cause unexpected issue set nocompatible
 
 " enable file type detection
 filetype on 
@@ -101,8 +100,6 @@ Plugin 'preservim/nerdtree'
 Plugin 'preservim/vim-markdown'
 Plugin 'patstockwell/vim-monokai-tasty'
 Plugin 'vim-airline/vim-airline'
-Plugin 'mzlogin/vim-markdown-toc'
-
 
 " Development/Syntax Plugins
 Plugin 'vim-syntastic/syntastic'
@@ -111,8 +108,13 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'mboughaba/i3config.vim'
+
+" Writing Plugins
+Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'vim-latex/vim-latex'
 Plugin 'junegunn/goyo.vim'
+Plugin 'sheerun/vim-polyglot'
+
 
 call vundle#end()
 
@@ -120,7 +122,11 @@ call vundle#end()
 
 " Mappings ----- {{{
 let mapleader=","
-" idk wtf this does
+
+let g:vimtex_fold_enabled=1
+let g:tex_flavor='latex'
+
+" goes back to normal (kinda shit imo)
 inoremap jj <esc>
  
 " nnoremap <leader>g A
@@ -131,6 +137,10 @@ nnoremap N Nzz
 
 nnoremap <C-g> :Goyo<CR>
 nnoremap <leader>m :set relativenumber!<CR>
+
+nnoremap <leader>c :!pandoc -t latex % -o output.pdf<CR>
+autocmd BufNewFile,BufRead *.md nnoremap j gj
+autocmd BufNewFile,BufRead *.md nnoremap k gk
 
 " yank from cursor end of line
 nnoremap Y y$
@@ -179,9 +189,13 @@ augroup END
 
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd FileType markdown set cursorline
-autocmd FileType markdown set conceallevel=2
+" autocmd FileType markdown set conceallevel=2
+autocmd Filetype markdown setlocal spell
 autocmd FileType markdown setlocal spelllang=en_gb
-
+autocmd Filetype markdown setlocal linebreak 
+autocmd Filetype markdown setlocal noexpandtab      
+" autocmd Filetype markdown setlocal formatoptions=1
+autocmd Filetype markdown setlocal wrap   
 
 aug i3config_ft_detection
   au!

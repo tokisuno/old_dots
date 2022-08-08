@@ -14,7 +14,6 @@ order += "path_exists VPN"
 order += "ethernet enp1s0"
 # order += "battery 0"
 order += "memory"
-order += "load"
 order += "tztime local"
 order += "tztime toronto"
 
@@ -62,10 +61,6 @@ tztime local {
 tztime toronto {
         format = "%Y-%m-%d %H:%M:%S %Z"
         timezone = "America/Toronto"
-}
-
-load {
-        format = "%5min"
 }
 
 cpu_temperature 0 {
