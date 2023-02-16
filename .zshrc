@@ -1,10 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+#eval $(thefuck --alias)
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -125,9 +127,19 @@ alias dzsh="vim ~/.zshrc"
 alias dkit="vim ~/.config/kitty/kitty.conf"
 alias sz="swallow sioyek " 
 
-alias p="python3.8 "
+alias zzz="xviewer ~/calm.gif -fwg"
 
-alias sdf="cvlc -fR ~/NEVERGIVEUP.mp4"
+alias g1="sz ~/Documents/Textbooks/Japanese/genki1.pdf"
+alias g2="sz ~/Documents/Textbooks/Japanese/genki2.pdf"
+alias rtk="sz ~/Documents/Textbooks/Japanese/rememberkanji.pdf"
 
-# no idea how this works LMAO
+alias wu="wordle random"
+alias wd="wordle daily"
+
+alias api="xclip -sel c < ~/api"
+
+alias ling="lf ~/Documents/Linguistics"
+alias tb="lf ~/Documents/Textbooks"
+alias sling="cp ~/Documents/Linguistics/4LC3 ~/Dropbox/University -r"
+
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"

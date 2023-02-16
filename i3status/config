@@ -10,27 +10,27 @@ general {
 
 order += "disk /"
 order += "path_exists VPN"
-#order += "wireless wlx7cc2c62d61ba"
-order += "ethernet enp4s0"
-# order += "battery 0"
+order += "wireless wlp3s0"
+#order += "ethernet enp1s0"
+order += "battery 0"
 order += "memory"
+#order += "load"
 order += "tztime local"
 order += "tztime toronto"
 
-# usb wifi card ID kekw
-wireless wlx7cc2c62d61ba {
+wireless wlp3s0 {
         format_up = "W: (%quality at %essid, %bitrate) %ip"
-        format_down = "W: down"
+        format_down = "W: fuck"
 }
 
-ethernet enp4s0{
+ethernet enp1s0 {
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
 }
 
 battery 0 {
         format = "%status %percentage %remaining %emptytime"
-        format_down = "No battery"
+        format_down = "no batt"
         status_chr = "⚡ CHR"
         status_bat = "🔋 BAT"
         status_unk = "? UNK"
@@ -61,6 +61,10 @@ tztime local {
 tztime toronto {
         format = "%Y-%m-%d %H:%M:%S %Z"
         timezone = "America/Toronto"
+}
+
+load {
+        format = "%5min"
 }
 
 cpu_temperature 0 {

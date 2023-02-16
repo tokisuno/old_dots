@@ -1,7 +1,7 @@
 # LUCAS CORDERO'S i3-gaps CONFIG FILE
 set $mod Mod1
-default_border pixel 3
-gaps inner 10
+default_border pixel 2
+gaps inner 9
 
 
 # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
@@ -88,19 +88,17 @@ set $ws3 "3:docs"
 set $ws4 "4:anki"
 set $ws5 "5:cinco"
 set $ws6 "6:seis"
-set $ws7 "7:obs"
+set $ws7 "7:siete"
 set $ws8 "8:wsp"
 set $ws9 "9:disc"
 set $ws10 "10:music"
 
 # WINDOW RULES
-# for_window[class="Thunar" instance="thunar"] floating enable
 assign [class="brave-browser" instance="Brave-browser"] $ws1
 # assign [class = "vim"] $ws2
 assign [class = "whatsapp-desktop" instance="whatsapp-desktop"] $ws8
 assign [class = "discord" instance="discord"] $ws9
 assign [class = "Spotify" instance="spotify"] $ws10
-assign [class = "Anki" instance="anki"] $ws4
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -164,7 +162,7 @@ bar {
         status_command i3status -c ~/.config/i3status/config
         strip_workspace_numbers yes
         position top
-        output VGA-0
+        output LVDS1
 
     colors {
         # Workspace Colours
@@ -195,13 +193,15 @@ bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'm
 
 
 # EXEC KEYS
-exec ibus-daemon --xim -r
-exec_always --no-startup-id autostart.sh
+exec --no-startup-id ibus-daemon -rxR
+exec_always --no-startup-id ~/.autostart.sh
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom -b --experimental-backend
 exec_always --no-startup-id autotiling
+exec --no-startup-id xfce4-power-manager
 
 bindsym $mod+w exec brave-browser 
+bindsym $mod+z exec discord
 bindsym $mod+x exec spotify
 bindsym $mod+p exec WhatsApp
 bindsym $mod+c exec thunar
@@ -216,8 +216,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
 exec --no-startup-id autostart
-
 # start rofi
-bindsym $mod+d exec "rofi -modi window,drun,run -show drun -sidebar-mode -terminal xfce4-terminal"
+bindsym $mod+d exec "rofi -modi window,drun,run -show drun -sidebar-mode -terminal kitty"
 
 
