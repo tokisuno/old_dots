@@ -8,10 +8,9 @@ filetype plugin on
 
 " load an indent file for the detected file type
 filetype indent on
-
 " enable syntax highlighting
 syntax on
-
+syntax enable 
 " theme
 set t_Co=256
 set background=dark
@@ -114,17 +113,10 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'sheerun/vim-polyglot'
 
 " LaTeX
-Plugin 'vim-latex/vim-latex'
+Plugin 'lervag/vimtex'
 Plugin 'xuhdev/vim-latex-live-preview'
 
-" LaTeX From Website 
-Plugin 'neoclide/coc.vim'
-
-Plugin 'honza/vim-snippets'
-Plugin 'lervag/vimtex'
-Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'Chiel92/vim-autoformat'
+Plugin 'LukeSmithxyz/vimling'
 
 call vundle#end()
 
@@ -133,16 +125,30 @@ colorscheme vim-monokai-tasty
 
 " Mappings ----- {{{
 let mapleader=","
+let maplocalleader = "-"
+
+nm <leader><leader>d :call ToggleDeadKeys()<CR>
+imap <leader><leader>d <esc>:call ToggleDeadKeys()<CR>a
+nm <leader><leader>i :call ToggleIPA()<CR>
+imap <leader><leader>i <esc>:call ToggleIPA()<CR>a
+nm <F8> :call ToggleProse()<CR>
 
 let g:vimtex_fold_enabled=1
 let g:tex_flavor='latex'
 
-let g:livepreview_previewer = 'xreader' 
-let g:livepreview_cursorhold_recompile = 0
+let g:vimtex_compiler_latexmk_engines = {
+    \ '_'                : '-xelatex',
+    \}
+
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_view_automatic = 1
+
+
 " goes back to normal (kinda shit imo)
 inoremap jj <esc>
  
-" nnoremap <leader>g A
 
 " centers word vertically when moving to the next word in a word search
 nnoremap n nzz
@@ -151,12 +157,13 @@ nnoremap N Nzz
 nnoremap <C-g> :Goyo<CR>
 nnoremap <leader>m :set relativenumber!<CR>
 
-nnoremap <leader>c :!pandoc -t latex % -o output.pdf<CR>
+nnoremap <leader>c :!pandoc -t latex % -o file.pdf<CR>
+
 autocmd BufNewFile,BufRead *.md nnoremap j gj
 autocmd BufNewFile,BufRead *.md nnoremap k gk
 
-" broken - nnoremap <C-s> :!pdflatex *.tex<CR>
-
+autocmd BufNewFile,BufRead *.tex nnoremap j gj
+autocmd BufNewFile,BufRead *.tex nnoremap k gk
 " yank from cursor end of line
 nnoremap Y y$
 
@@ -177,6 +184,7 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
 
 " will create a new line and instantly exit out of insert mode after
 nnoremap o o<esc>
