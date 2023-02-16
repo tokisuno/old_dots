@@ -1,7 +1,7 @@
 # dotfiles - my entire config
 
 ## Dependencies
-(i use mint btw)
+(i use ubuntu 22.10 + i3 btw)
 *there are most likely other dependencies for these programs that i can't list rn but they def exist.*
 ```
 sudo apt install i3 vim git picom ibus-hangul scrot xclip nitrogen rofi fonts-nanum fonts-nanum-coding fonts-nanum-eco fonts-nanum-extra texlive-full texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-korean zsh libpam0g-dev libxcb-xkb-dev ibus-anthy 
