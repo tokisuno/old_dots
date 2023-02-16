@@ -123,10 +123,11 @@ alias di3="vim ~/.config/i3/config"
 alias dstat="vim ~/.config/i3status/config"
 alias dzsh="vim ~/.zshrc"
 alias dkit="vim ~/.config/kitty/kitty.conf"
-alias sz="swallow zathura " 
+alias sz="swallow sioyek " 
 
-export SPOTIPY_CLIENT_ID='1ba818b3208a47c99142a4d883ab3ac3'
-export SPOTIPY_CLIENT_SECRET='349d1f58ce4546be8d45c49c8a9059e8'
-export SPOTIPY_REDIRECT_URI='https://localhost:8888'
+alias p="python3.8 "
+
+alias sdf="cvlc -fR ~/NEVERGIVEUP.mp4"
+
 # no idea how this works LMAO
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"

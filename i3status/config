@@ -11,7 +11,7 @@ general {
 order += "disk /"
 order += "path_exists VPN"
 #order += "wireless wlx7cc2c62d61ba"
-order += "ethernet enp1s0"
+order += "ethernet enp4s0"
 # order += "battery 0"
 order += "memory"
 order += "tztime local"
@@ -23,7 +23,7 @@ wireless wlx7cc2c62d61ba {
         format_down = "W: down"
 }
 
-ethernet enp1s0 {
+ethernet enp4s0{
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
 }
