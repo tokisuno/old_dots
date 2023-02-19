@@ -4,7 +4,7 @@
 (i use ubuntu 22.10 + i3 btw)
 *there are most likely other dependencies for these programs that i can't list rn but they def exist.*
 ```
-sudo apt install i3 vim git picom ibus-hangul scrot xclip nitrogen rofi fonts-nanum fonts-nanum-coding fonts-nanum-eco fonts-nanum-extra texlive-full texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-korean zsh libpam0g-dev libxcb-xkb-dev ibus-anthy 
+sudo apt install i3 vim git picom ibus-hangul scrot xclip nitrogen rofi fonts-nanum fonts-nanum-coding fonts-nanum-eco fonts-nanum-extra texlive-full texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-korean zsh libpam0g-dev libxcb-xkb-dev ibus-anthy kitty mpv vim zsh 
 ```
 
 
@@ -15,7 +15,7 @@ sudo apt install i3 vim git picom ibus-hangul scrot xclip nitrogen rofi fonts-na
 - i3status config (.config/i3status/config)
 - autostart for setting sensitivity on desktop/laptop (x220 and desktop)
 
-## Programs I use on Mint
+## Programs I use on Ubuntu 22.10 + i3 (4.22)
 **NOTE: FIX THE COLOUR THEME SHIT**
 ```
 git clone https://github.com/NLKNguyen/paper color-theme.git ~/.vim/pack/colors/start/papercolor-theme
@@ -33,10 +33,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ```
 https://apps.ankiweb.net/
 ```
-*i think this isn't needed anymore on new versions of mint since gaps merged with the main i3 repo iirc*
-```
-sudo add-apt-repository -y ppa:regolith-linux/stable && sudo apt install i3-gaps
-```
+
+
 
 ## IMPORTANT FOR WHEN USING SLIPPI ON LINUX
 
