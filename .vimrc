@@ -1,4 +1,6 @@
-" disable compatibility with vi which can cause unexpected issue set nocompatible
+" disable compatibility with vi which can cause unexpected issue 
+"
+set nocompatible
 
 " enable file type detection
 filetype on 
@@ -111,6 +113,7 @@ Plugin 'mboughaba/i3config.vim'
 Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'junegunn/goyo.vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'vimwiki/vimwiki'
 
 " LaTeX
 Plugin 'lervag/vimtex'
@@ -132,6 +135,44 @@ imap <leader><leader>d <esc>:call ToggleDeadKeys()<CR>a
 nm <leader><leader>i :call ToggleIPA()<CR>
 imap <leader><leader>i <esc>:call ToggleIPA()<CR>a
 nm <F8> :call ToggleProse()<CR>
+
+function! ToggleSpell(lang)
+	if !exists("b:old_spelllang")
+		let b:old_spelllang = &spelllang
+		let b:old_spellfile = &spellfile
+		let b:old_dictionary = &dictionary
+	endif
+
+	let l:newMode = ""
+	if !&l:spell || a:lang != &l:spelllang
+		setlocal spell
+		let l:newMode = "spell"
+		execute "setlocal spelllang=" . a:lang
+		execute "setlocal spellfile=" . "~/.vim/spell/" . matchstr(a:lang, "[a-zA-Z][a-zA-Z]") . "." . &encoding . ".add"
+		execute "setlocal dictionary=" . "~/.vim/spell/" . a:lang . "." . &encoding . ".dic"
+		let l:newMode .= ", " . a:lang
+	else
+		setlocal nospell
+		let l:newMode = "nospell"
+		execute "setlocal spelllang=" . b:old_spelllang
+		execute "setlocal spellfile=" . b:old_spellfile
+		execute "setlocal dictionary=" . b:old_dictionary
+	endif
+	return l:newMode
+endfunction
+" }}}
+nmap <silent> <F7> :echo ToggleSpell("en_ca")<CR>			" Toggle English spell.
+nmap <silent> <F8> :echo ToggleSpell("es_cl")<CR>				" Toggle Spanish (Chile) spell.
+
+imap <c-f> <c-g>u<Esc>[s1z=`]a<c-g>u
+nmap <c-f> [s1z=<c-o>
+
+func! WordCount()
+    echo vimtex#misc#wordcount()
+endfunc
+nnoremap <leader>wr :call WordCount()<CR>
+
+nnoremap <F5> "=strftime("%Y-%m-%d")<CR>P
 
 let g:vimtex_fold_enabled=1
 let g:tex_flavor='latex'
@@ -210,6 +251,8 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
+
+
 autocmd Filetype tex setl updatetime=1
 
 autocmd BufNewFile,BufRead *.md set filetype=markdown
@@ -285,6 +328,6 @@ endif
 
 " Status Line ----- {{{
 
-" status bar code goes here 
+" lol
 
 " }}}

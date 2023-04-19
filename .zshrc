@@ -4,7 +4,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #eval $(thefuck --alias)
 # Set name of the theme to load --- if set to "random", it will
@@ -125,21 +125,24 @@ alias di3="vim ~/.config/i3/config"
 alias dstat="vim ~/.config/i3status/config"
 alias dzsh="vim ~/.zshrc"
 alias dkit="vim ~/.config/kitty/kitty.conf"
-alias sz="swallow sioyek " 
+alias so="swallow sioyek " 
+alias sz="swallow zathura "
 
 alias zzz="xviewer ~/calm.gif -fwg"
 
-alias g1="sz ~/Documents/Textbooks/Japanese/genki1.pdf"
-alias g2="sz ~/Documents/Textbooks/Japanese/genki2.pdf"
-alias rtk="sz ~/Documents/Textbooks/Japanese/rememberkanji.pdf"
+alias g1="so ~/Dropbox/hub/ling/tbs/jp/genki1.pdf"
+alias g2="so ~/Dropbox/hub/ling/tbs/jp/genki2.pdf"
+
+alias db="cd ~/Dropbox"
 
 alias wu="wordle random"
 alias wd="wordle daily"
 
+alias back="cd .."
+
 alias api="xclip -sel c < ~/api"
 
-alias ling="lf ~/Documents/Linguistics"
-alias tb="lf ~/Documents/Textbooks"
-alias sling="cp ~/Documents/Linguistics/4LC3 ~/Dropbox/University -r"
+alias ling="cd ~/Dropbox/hub/ling"
+alias tb="cd ~/Dropbox/hub/ling/tbs"
 
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
