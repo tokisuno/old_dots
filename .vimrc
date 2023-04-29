@@ -1,4 +1,4 @@
-" disable compatibility with vi which can cause unexpected issue 
+
 "
 set nocompatible
 
@@ -87,6 +87,8 @@ set wildmode=list:longest
 
 "wildmenu will ignore these file extensions
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+" setting mouse for when i want to go noob mode
+set mouse=a
 
 " Plugins ----- {{{
 
@@ -113,13 +115,15 @@ Plugin 'mboughaba/i3config.vim'
 Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'junegunn/goyo.vim'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'vimwiki/vimwiki'
 
 " LaTeX
 Plugin 'lervag/vimtex'
 Plugin 'xuhdev/vim-latex-live-preview'
-
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'LukeSmithxyz/vimling'
+
+
 
 call vundle#end()
 
@@ -130,11 +134,16 @@ colorscheme vim-monokai-tasty
 let mapleader=","
 let maplocalleader = "-"
 
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+
 nm <leader><leader>d :call ToggleDeadKeys()<CR>
 imap <leader><leader>d <esc>:call ToggleDeadKeys()<CR>a
 nm <leader><leader>i :call ToggleIPA()<CR>
 imap <leader><leader>i <esc>:call ToggleIPA()<CR>a
-nm <F8> :call ToggleProse()<CR>
+" nm <F8> :call ToggleProse()<CR>
 
 function! ToggleSpell(lang)
 	if !exists("b:old_spelllang")
@@ -174,7 +183,7 @@ nnoremap <leader>wr :call WordCount()<CR>
 
 nnoremap <F5> "=strftime("%Y-%m-%d")<CR>P
 
-let g:vimtex_fold_enabled=1
+" let g:vimtex_fold_enabled=1
 let g:tex_flavor='latex'
 
 let g:vimtex_compiler_latexmk_engines = {
@@ -186,6 +195,7 @@ let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_view_automatic = 1
 
+nnoremap <leader>f :noh<CR>
 
 " goes back to normal (kinda shit imo)
 inoremap jj <esc>
@@ -246,10 +256,10 @@ nmap z[ zo[z
 
 " enables code folding
 " use the marker method of folding
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-augroup END
+" augroup filetype_vim
+"     autocmd!
+"     autocmd FileType vim setlocal foldmethod=marker
+" augroup END
 
 
 

@@ -140,9 +140,14 @@ alias wd="wordle daily"
 
 alias back="cd .."
 
-alias api="xclip -sel c < ~/api"
+alias api="xclip -sel c < ~/Dropbox/api"
+
+alias sdf="hugo server"
+alias wer="hugo -t xmin"
 
 alias ling="cd ~/Dropbox/hub/ling"
 alias tb="cd ~/Dropbox/hub/ling/tbs"
+
+alias dg="git clone https://github.com/tokisuno/dotfiles"
 
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
