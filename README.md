@@ -1,6 +1,6 @@
 # dotfiles - my entire config
 
-## Config Files
+### Config Files
 - .zshrc (~/)
 - neovim config (.config/nvim)
 - i3 config (.config/i3/config)
