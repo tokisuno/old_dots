@@ -11,7 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="strug" # set by `omz`
+ZSH_THEME="mh" # set by `omz`
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -71,6 +71,8 @@ plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -109,6 +111,9 @@ fi
  alias zshconfig="vim ~/.zshrc"
  alias ohmyzsh="vim ~/.oh-my-zsh"
 
+alias vim='nvim'
+
+
 # git aliases
 alias ga="git add ."
 alias gc="git commit -m 'kekw'"
@@ -142,12 +147,20 @@ alias back="cd .."
 
 alias api="xclip -sel c < ~/Dropbox/api"
 
-alias sdf="hugo server"
+alias sdf="hugo server -D"
 alias wer="hugo -t xmin"
 
 alias ling="cd ~/Dropbox/hub/ling"
 alias tb="cd ~/Dropbox/hub/ling/tbs"
 
+alias lkj='ssh server@192.168.0.203'
+
 alias dg="git clone https://github.com/tokisuno/dotfiles"
+
+alias vc='cd ~/.config/nvim/ && ls'
+alias vcc='cd ~/.config/nvim/lua/toki/ && ls'
+alias vcp='cd ~/.config/nvim/after/plugin/ && ls'
+
+alias neofetch='hyfetch'
 
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"

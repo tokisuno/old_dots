@@ -1,7 +1,7 @@
 # LUCAS CORDERO'S i3-gaps CONFIG FILE
 set $mod Mod1
 default_border pixel 2
-gaps inner 9
+gaps inner 16
 
 
 # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
@@ -82,23 +82,21 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:www"
-set $ws2 "2:vim"
-set $ws3 "3:docs"
-set $ws4 "4:anki"
-set $ws5 "5:cinco"
-set $ws6 "6:seis"
-set $ws7 "7:siete"
-set $ws8 "8:wsp"
-set $ws9 "9:disc"
-set $ws10 "10:music"
+set $ws1 "1:I"
+set $ws2 "2:II"
+set $ws3 "3:III"
+set $ws4 "4:IV"
+set $ws5 "5:V"
+set $ws6 "6:VI"
+set $ws7 "7:VII"
+set $ws8 "8:VIII"
+set $ws9 "9:IX"
+set $ws10 "10:音楽"
 
 # WINDOW RULES
-assign [class="brave-browser" instance="Brave-browser"] $ws1
+assign [class="firefox" instance="Mozilla Firefox"] $ws1
 # assign [class = "vim"] $ws2
-assign [class = "whatsapp-desktop" instance="whatsapp-desktop"] $ws8
-assign [class = "discord" instance="discord"] $ws9
-assign [class = "Spotify" instance="spotify"] $ws10
+assign [class = "spotify" instance="Spotify"] $ws10
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -162,7 +160,7 @@ bar {
         status_command i3status -c ~/.config/i3status/config
         strip_workspace_numbers yes
         position top
-        output LVDS1
+        output DVI-I-1
 
     colors {
         # Workspace Colours
@@ -185,26 +183,27 @@ client.background       #212121
 
 
 
-# Multi-screen screenshots with scrot
-bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # All screens
-
-# OSX-like area selection screenshots
-bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection
+# # Multi-screen screenshots with scrot
+# bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # All screens
+# 
+# # OSX-like area selection screenshots
+# bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection
+# 
 
 
 # EXEC KEYS
 exec --no-startup-id ibus-daemon -rxR
-exec_always --no-startup-id ~/.autostart.sh
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom -b --experimental-backend
 exec_always --no-startup-id autotiling
 exec --no-startup-id xfce4-power-manager
 
-bindsym $mod+w exec brave-browser 
+bindsym $mod+Shift+a exec xdg-open https://hochanh.github.io/rtk/index.html
+bindsym $mod+Shift+f exec xdg-open https://jisho.org
+bindsym $mod+w exec firefox
 bindsym $mod+z exec discord
-bindsym $mod+x exec spotify
-bindsym $mod+p exec WhatsApp
 bindsym $mod+c exec thunar
+bindsym $mod+F12 exec yakuake
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -216,6 +215,11 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
 exec --no-startup-id autostart
+exec --no-startup-id dropbox start
+exec --no-startup-id flameshot
+
+bindsym Print exec flameshot gui 
+
 # start rofi
 bindsym $mod+d exec "rofi -modi window,drun,run -show drun -sidebar-mode -terminal kitty"
 
