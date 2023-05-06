@@ -19,5 +19,4 @@ git clone https://github.com/NLKNguyen/paper color-theme.git ~/.vim/pack/colors/
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-rip .vimrc
-
+*keeping my .vimrc incase anyone wants to use it, but be aware that it'll never be updated again*
