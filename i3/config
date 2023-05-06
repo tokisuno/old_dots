@@ -204,6 +204,7 @@ bindsym $mod+w exec firefox
 bindsym $mod+z exec discord
 bindsym $mod+c exec thunar
 bindsym $mod+F12 exec yakuake
+bindsym $mod+Shift+Return exec "kitty --hold ssh server@192.168.0.203"
 
 # start a terminal
 bindsym $mod+Return exec kitty

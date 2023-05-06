@@ -22,12 +22,19 @@ return require('packer').startup(function(use)
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-treesitter/playground')
+    use {'nvim-orgmode/orgmode', config = function()
+        require('orgmode').setup{}
+        end
+    }
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
+    use('vim-airline/vim-airline')
+    -- For writing
     use('junegunn/goyo.vim')
     use('lervag/vimtex')
-    use('vim-airline/vim-airline')
+    use('honza/vim-snippets')
+    use('xuhdev/vim-latex-live-preview')
 
 
     use {
@@ -54,6 +61,6 @@ return require('packer').startup(function(use)
             {'rafamadriz/friendly-snippets'},
         }
     }
-
+    
 end)
 
