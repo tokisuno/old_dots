@@ -1,7 +1,7 @@
 # LUCAS CORDERO'S i3-gaps CONFIG FILE
 set $mod Mod1
 default_border pixel 2
-gaps inner 16
+gaps inner 20
 
 
 # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
@@ -91,7 +91,7 @@ set $ws6 "6:VI"
 set $ws7 "7:VII"
 set $ws8 "8:VIII"
 set $ws9 "9:IX"
-set $ws10 "10:音楽"
+set $ws10 "10:X"
 
 # WINDOW RULES
 assign [class="firefox" instance="Mozilla Firefox"] $ws1
@@ -197,6 +197,18 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom -b --experimental-backend
 exec_always --no-startup-id autotiling
 exec --no-startup-id xfce4-power-manager
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+exec --no-startup-id pasystray
+exec --no-startup-id autostart
+exec --no-startup-id dropbox start
+exec --no-startup-id flameshot
+exec --no-startup-id /usr/bin/emacs --daemon
+
+# for when i set up orgmode 
+# geek-life is a shit program
+# bindsym $mod+minus exec kitty --class floating --hold zsh -c "bar"
+
 
 bindsym $mod+Shift+a exec xdg-open https://hochanh.github.io/rtk/index.html
 bindsym $mod+Shift+f exec xdg-open https://jisho.org
@@ -205,6 +217,8 @@ bindsym $mod+z exec discord
 bindsym $mod+c exec thunar
 bindsym $mod+F12 exec yakuake
 bindsym $mod+Shift+Return exec "kitty --hold ssh server@192.168.0.203"
+bindsym $mod+Shift+minus exec "emacsclient -c -a 'emacs'"
+
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -212,12 +226,7 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
-exec --no-startup-id pasystray
-exec --no-startup-id autostart
-exec --no-startup-id dropbox start
-exec --no-startup-id flameshot
+
 
 bindsym Print exec flameshot gui 
 

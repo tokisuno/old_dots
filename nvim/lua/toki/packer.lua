@@ -19,13 +19,9 @@ return require('packer').startup(function(use)
         config = function()
             vim.cmd('colorscheme kanagawa')
     end})
-
+    use('renerocksai/calendar-vim')
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-treesitter/playground')
-    use {'nvim-orgmode/orgmode', config = function()
-        require('orgmode').setup{}
-        end
-    }
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
