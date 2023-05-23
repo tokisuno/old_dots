@@ -1,5 +1,5 @@
 # dotfiles - my entire config
-
+*my apps aptclone is probs outdated. there are also programs i use that i compiled by source. i.e. ibus & emacs*
 ### Config Files
 - .zshrc (~/)
 - neovim config (.config/nvim)
