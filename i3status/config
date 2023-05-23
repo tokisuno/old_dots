@@ -8,11 +8,11 @@ general {
     separator = "|"
 }
 
-order += "disk /"
-order += "path_exists VPN"
+#order += "path_exists VPN"
 #order += "wireless wlp3s0"
 order += "ethernet enp4s0"
 #order += "battery 0"
+order += "disk /"
 order += "memory"
 #order += "load"
 order += "tztime local"
@@ -24,8 +24,8 @@ wireless wlp3s0 {
 }
 
 ethernet enp4s0 {
-        format_up = "E: %ip (%speed)"
-        format_down = "E: down"
+        format_up = "%ip (%speed)"
+        format_down = "E: fuck"
 }
 
 battery 0 {

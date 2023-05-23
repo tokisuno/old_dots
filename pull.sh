@@ -10,5 +10,10 @@ cp -t ~/dotfiles ~/.zshrc ~/.vimrc ~/.config/picom.conf\
 && mkdir kitty\
 && cp -t kitty ~/.config/kitty/kitty.conf\
 && mkdir nvim\
-&& cp -r ~/.config/nvim/ .
+&& cp -r ~/.config/nvim/ .\
+&& cp -r ~/.local/share/scripts/ .\
+&& cp -r ~/.config/doom/ . \
+&& cp -r ~/.config/emacs/ .\
+&& mkdir conky\
+&& cp -r ~/.config/conky/ conky\
 
