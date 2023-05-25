@@ -135,6 +135,11 @@ _G.packer_plugins = {
     path = "/home/woopityscoop/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/woopityscoop/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/woopityscoop/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -199,6 +204,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/woopityscoop/.local/share/nvim/site/pack/packer/start/vim-latex-live-preview",
     url = "https://github.com/xuhdev/vim-latex-live-preview"
+  },
+  ["vim-pandoc"] = {
+    loaded = true,
+    path = "/home/woopityscoop/.local/share/nvim/site/pack/packer/start/vim-pandoc",
+    url = "https://github.com/vim-pandoc/vim-pandoc"
+  },
+  ["vim-pandoc-syntax"] = {
+    loaded = true,
+    path = "/home/woopityscoop/.local/share/nvim/site/pack/packer/start/vim-pandoc-syntax",
+    url = "https://github.com/vim-pandoc/vim-pandoc-syntax"
   },
   ["vim-snippets"] = {
     loaded = true,

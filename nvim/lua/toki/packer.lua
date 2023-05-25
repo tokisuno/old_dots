@@ -19,7 +19,14 @@ return require('packer').startup(function(use)
         config = function()
             vim.cmd('colorscheme kanagawa')
     end})
-    use('renerocksai/calendar-vim')
+    -- install markdown-preview without yarn or npm
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+    use('vim-pandoc/vim-pandoc')
+    use('vim-pandoc/vim-pandoc-syntax')
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
