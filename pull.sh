@@ -3,17 +3,12 @@
 # tokisuno scuffed config installation script
 
 cp -t ~/dotfiles ~/.zshrc ~/.vimrc ~/.config/picom.conf\
-&& mkdir i3status\
-&& cp -t i3status ~/.config/i3status/config\
-&& mkdir i3\
-&& cp -t i3 ~/.config/i3/config\
-&& mkdir kitty\
-&& cp -t kitty ~/.config/kitty/kitty.conf\
-&& mkdir nvim\
+&& cp -r ~/.config/i3status/ .\
+&& cp -r ~/.config/i3/ .\
+&& cp -r ~/.config/kitty/ .\
 && cp -r ~/.config/nvim/ .\
 && cp -r ~/.local/share/scripts/ .\
 && cp -r ~/.config/doom/ . \
 && cp -r ~/.config/emacs/ .\
-&& mkdir conky\
-&& cp -r ~/.config/conky/ conky\
+&& cp -r ~/.config/conky/ .\
 
