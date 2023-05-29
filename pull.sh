@@ -8,7 +8,5 @@ cp -t ~/dotfiles ~/.zshrc ~/.vimrc ~/.config/picom.conf\
 && cp -r ~/.config/kitty/ .\
 && cp -r ~/.config/nvim/ .\
 && cp -r ~/.local/share/scripts/ .\
-&& cp -r ~/.config/doom/ . \
-&& cp -r ~/.config/emacs/ .\
 && cp -r ~/.config/conky/ .\
-
+&& cp -r ~/.config/i3blocks/ .\
