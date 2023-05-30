@@ -8,6 +8,9 @@
 - kitty (.config/kitty/kitty.conf)
 - autostart for setting sensitivity on desktop/laptop (x220 and desktop)
 
+![image](https://github.com/tokisuno/dotfiles/assets/85533116/17a0e331-bdb0-48f9-b746-780f934a6644)
+
+
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
