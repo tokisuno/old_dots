@@ -10,7 +10,6 @@ return require('packer').startup(function(use)
     -- Custom Plugins
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use({
@@ -19,11 +18,10 @@ return require('packer').startup(function(use)
         config = function()
             vim.cmd('colorscheme kanagawa')
     end})
-    -- install markdown-preview without yarn or npm
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-    })
+    use {
+	        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
     use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
     use('vim-pandoc/vim-pandoc')
     use('vim-pandoc/vim-pandoc-syntax')
@@ -39,6 +37,17 @@ return require('packer').startup(function(use)
     use('honza/vim-snippets')
     use('xuhdev/vim-latex-live-preview')
 
+    -- Unless you are still migrating, remove the deprecated commands from v1.x
+    vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+    use {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v2.x",
+        requires = { 
+          "nvim-lua/plenary.nvim",
+          "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+          "MunifTanjim/nui.nvim",
+        }
+    }
 
     use {
         'VonHeikemen/lsp-zero.nvim',

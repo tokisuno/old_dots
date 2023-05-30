@@ -27,6 +27,8 @@ ks.set("x", "<leader>p", [["_dP]])
 -- sets launch perms for file being written to
 ks.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
+ks.set("n", "<leader>f", "<cmd>Neotree<cr>", { silent = true })
+
 -- custom binds
 ks.set('n', '<leader>w', "<cmd>w<cr>")
 ks.set('n', '<leader>s', "<cmd>so<cr>")

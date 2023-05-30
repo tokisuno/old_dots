@@ -1,0 +1,82 @@
+command=$SCRIPT_DIR/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+[mediaplayer]
+command=$SCRIPT_DIR/mediaplayer/mediaplayer
+color=#689d6a
+label=音楽：
+instance=spotify
+interval=5
+signal=10
+
+[volume]
+command=$SCRIPT_DIR/volume/volume
+label=♪:
+color=#98971a
+interval=once
+signal=10
+
+[disk]
+command=$SCRIPT_DIR/disk_usage/disk_usage
+color=#d79921
+label=HOME
+#DIR=/mnt/data
+interval=30
+
+# [memory]
+# command=$SCRIPT_DIR/memory/memory
+# label=MEM
+# interval=30
+
+[wifi]
+#INTERFACE=wlp3s0
+label=wifi:
+interval=10
+separator=false
+
+[battery]
+label=BAT
+#label=⚡
+interval=30
+
+# Date Time
+#
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+color=#d65d0e
+interval=1
+
+
+# OpenVPN support
+#
+# Support multiple VPN, with colors.
+#[openvpn]
+#interval=20
+
+# Temperature
+#
+# Support multiple chips, though lm-sensors.
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+#[temperature]
+#label=TEMP
+#interval=10
+
+# Key indicators
+#
+# Add the following bindings to i3 config file:
+#
+# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+#[keyindicator]
+#KEY=CAPS
+#markup=pango
+#interval=once
+#signal=11
+
+#[keyindicator]
+#KEY=NUM
+#markup=pango
+#interval=once
+#signal=11

@@ -10,10 +10,12 @@ general {
 
 #order += "path_exists VPN"
 #order += "wireless wlp3s0"
+#order += "external_script"
 order += "ethernet enp4s0"
+order += "volume master"
 #order += "battery 0"
 order += "disk /"
-order += "memory"
+#order += "memory"
 #order += "load"
 order += "tztime local"
 order += "tztime toronto"
@@ -23,9 +25,22 @@ wireless wlp3s0 {
         format_down = "W: fuck"
 }
 
+# external_script {
+#     script_path = "/home/woopityscoop/.local/share/scripts/py3spotifystatus/pystatus.py"
+#     cache_timeout = 1
+# }
+
 ethernet enp4s0 {
         format_up = "%ip (%speed)"
         format_down = "E: fuck"
+}
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
 }
 
 battery 0 {
