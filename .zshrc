@@ -1,14 +1,7 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-# If you come from bash you might have to change your $PATH.
-
 PATH=$HOME/bin:/usr/local/bin:$PATH
-
 export GLFW_IM_MODULE=ibus
 export CC="clang"
 export CFLAGS="-ferror-limit=1 -gdwarf-4 -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-gnu-folding-constant -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wno-unused-but-set-variable -Wshadow"
@@ -23,6 +16,17 @@ export EDITOR=/usr/bin/nvim
 # export DB_FILE="~/Sync/todo/default.db" 
 plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
+
+# zshrc or bashrc
+lf () {
+	LF_TEMPDIR="$(mktemp -d -t lf-tempdir-XXXXXX)"
+	LF_TEMPDIR="$LF_TEMPDIR" lf-run -last-dir-path="$LF_TEMPDIR/lastdir" "$@"
+	if [ "$(cat "$LF_TEMPDIR/cdtolastdir" 2>/dev/null)" = "1" ]; then
+		cd "$(cat "$LF_TEMPDIR/lastdir")"
+	fi
+	rm -r "$LF_TEMPDIR"
+	unset LF_TEMPDIR
+}
 
 lfcd () {
     tmp="$(mktemp)"

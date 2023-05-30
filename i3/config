@@ -7,7 +7,7 @@ set $down j
 set $left h
 set $right l
 set $primary_gaps 24
-set $secondary_gaps 40
+set $secondary_gaps 24
 
 set $bg #282828
 set $red #cc241d

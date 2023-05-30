@@ -1,7 +1,0 @@
-#!/bin/bash
-
-today=$(date +"%Y-%m-%d")
-emacsclient -eval "(progn (setq org-agenda-custom-commands '((\"X\" agenda \"\" ((ps-number-of-columns 2) (ps-landscape-mode t) (org-agenda-span (quote day)) (org-agenda-with-colors nil) (org-agenda-remove-tags t)) (\"~/Sync/org/agenda\")))) (org-batch-store-agenda-views org-agenda-span (quote day) org-agenda-start-day \"$today\"))" > /dev/null 
-
-cat ~/Sync/org/agenda
-
