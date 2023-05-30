@@ -2,6 +2,12 @@ command=$SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=15
 markup=pango
 
+[i3-focusedwindow]
+label=...[]=
+min_width=1245
+command=$SCRIPT_DIR/i3-focusedwindow/i3-focusedwindow
+interval=persist
+
 [mediaplayer]
 command=$SCRIPT_DIR/mediaplayer/mediaplayer
 color=#689d6a
