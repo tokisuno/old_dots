@@ -30,9 +30,19 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
-    use('vim-airline/vim-airline')
+    use('nvim-tree/nvim-web-devicons') -- OPTIONAL: for file icons
+
+    use('lewis6991/gitsigns.nvim') -- OPTIONAL: for git status
+    use('romgrk/barbar.nvim')
+    use('ThePrimeagen/vim-be-good')
+
+    use('xiyaowong/transparent.nvim')
+    use {
+        'nvim-lualine/lualine.nvim'
+    }
     -- For writing
-    use('junegunn/goyo.vim')
+    use('Pocco81/true-zen.nvim')
+    use('folke/twilight.nvim')
     use('lervag/vimtex')
     use('honza/vim-snippets')
     use('xuhdev/vim-latex-live-preview')
@@ -42,9 +52,8 @@ return require('packer').startup(function(use)
     use {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v2.x",
-        requires = { 
+        requires = {
           "nvim-lua/plenary.nvim",
-          "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
           "MunifTanjim/nui.nvim",
         }
     }

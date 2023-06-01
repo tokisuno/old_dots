@@ -39,3 +39,5 @@ vim.g['vimtex_view_general_viewer'] = 'okular'
 vim.g['vimtex_view_genral_options'] = '--unique file:@pdf#src@line@tex'
 vim.g['vimtex_view_automatic'] = 1
 
+-- vim.g['autocmd!'] = "User GoyoEnter Limelight"
+-- vim.g['autocmd!'] = "User GoyoLeave Limelight!"
