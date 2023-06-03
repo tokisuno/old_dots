@@ -10,3 +10,6 @@ cp -t ~/dotfiles ~/.zshrc ~/.vimrc ~/.config/picom.conf\
 && cp -r ~/.local/share/scripts/ .\
 && cp -r ~/.config/conky/ .\
 && cp -r ~/.config/i3blocks/ .\
+&& cp -r ~/.config/lf . \
+&& cp -r ~/.config/dunst/dunstrc . \
+
