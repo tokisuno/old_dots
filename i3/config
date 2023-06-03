@@ -124,6 +124,7 @@ bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 exec --no-startup-id kitty newsboat
 
 # --- primary monitor movement ---
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -205,19 +206,15 @@ client.background	#282828
 # EXEC 
 exec --no-startup-id ibus-daemon -rxR
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id picom -b --experimental-backend
+exec --no-startup-id picom -b --experimental-backend -C 
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
 exec --no-startup-id autostart
 exec --no-startup-id autotiling 
 exec --no-startup-id flameshot
-exec --no-startup-id emacs --daemon
 exec --no-startup-id xrandr --output DVI-I-1 --primary --mode 1920x1200
 exec --no-startup-id xrandr --output DP-0 --mode 1920x1080 --below DVI-I-1
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id i3-msg "$ws8; exec /usr/bin/kitty --hold bashtop"
-exec --no-startup-id i3-msg "$ws8; exec /usr/bin/kitty --hold ssh server@192.168.0.203"
-exec --no-startup-id i3-msg "$ws9; exec /usr/bin/spotify"
 
 # FOR LAPTOP
 #exec --no-startup-id xfce4-power-manager
@@ -237,15 +234,17 @@ bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun -sidebar-mod
 # BINDS
 bindsym $mod+w exec firefox --class main
 bindsym $mod+c exec thunar
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec kitty 
 bindsym $mod+Ctrl+f exec thunderbird
 bindsym $mod+Ctrl+d exec --no-startup-id git_api
 bindsym $mod+Shift+a exec firefox https://hochanh.github.io/rtk/index.html --class jp
 bindsym $mod+Shift+f exec firefox https://jisho.org --class jp
 bindsym $mod+Shift+Return exec /usr/bin/kitty --hold ssh server@192.168.0.203
-bindsym $mod+Shift+minus exec "emacsclient -c -a 'emacs'"
-# bindsym $mod+Shift+y exec --no-startup-id ~/.local/share/scripts/toggle-conky
 bindsym $mod+Shift+q kill
+
+# rip emacs
+# bindsym $mod+Shift+minus exec "emacsclient -c -a 'emacs'"
+# bindsym $mod+Shift+y exec --no-startup-id ~/.local/share/scripts/toggle-conky
 
 bindsym Print exec flameshot gui 
 # Review the lines below and append to ~/.config/i3/config

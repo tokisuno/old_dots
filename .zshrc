@@ -1,3 +1,6 @@
+# requires motivate repo 
+motivate 
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -99,7 +102,7 @@ alias dpi='vim ~/.config/picom.conf'
 alias vc='cd ~/.config/nvim/ && ls'
 alias vcc='cd ~/.config/nvim/lua/toki/ && ls'
 alias vcp='cd ~/.config/nvim/after/plugin/ && ls'
-
+alias fl="gcalcli calm"
 alias neofetch='hyfetch'
 
 alias back="cd .."
@@ -109,13 +112,12 @@ alias sdfh="cd ~/Documents/website/blog"
 alias comd="hugo server -D"
 alias comx="hugo -t xmin"
 
-alias dfm="emacsclient -c -a 'emacs'"
-
 alias lkj='ssh server@192.168.0.203'
 
 alias mpv='swallow mpv --save-position-on-quit'
 
 # for syncthing
+# TODO: REDO ALL OF THE DIRS SINCE I CHANGED THEM A TON
 alias sdf='cd ~/Sync/'
 alias sdfl='cd ~/Sync/hub/ling/'
 alias temp='cd ~/Sync/hub/ling/4LC3/termpaper/'
@@ -123,6 +125,7 @@ alias tb="cd ~/Sync/hub/tbs/"
 alias g1="so ~/Sync/hub/tbs/jp/genki1.pdf"
 alias g2="so ~/Sync/hub/tbs/jp/genki2.pdf"
 
+alias vid='cd ~/Videos/ && lf'
 
 # pomodoro timer: requires tomoshell
 alias qwer='tomatoshell -t 50 -d 10 -n 10'
