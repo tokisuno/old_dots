@@ -1,7 +1,6 @@
-# dotfiles - my entire config
-*my apps aptclone is probs outdated. there are also programs i use that i compiled by source. i.e. ibus. i am planning on learning arch over the summer*
-
+# my old ubuntu dotfiles
 **requires [Hack Nerd Font & JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)**
+
 ### i3 config stuff
 - i3 config (.config/i3/config) 
 - i3blocks config (.config/i3blocks/config)
